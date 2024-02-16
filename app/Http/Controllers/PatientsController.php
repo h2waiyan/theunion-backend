@@ -11,7 +11,7 @@ class PatientsController extends Controller
 {
     public function index()
     {
-        $patients = Patient::where('is_vot_patient', 0)->get();
+        $patients = Patient::all();
         if ($patients->count() > 0) {
             $data = [
                 'status' => 'success',
